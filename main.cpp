@@ -39,3 +39,12 @@ struct Course {
     string code;
     double score; // Added score directly in Course structure
 };
+
+// Structure for student data to gate all usefull data and store it
+struct Student {
+    string firstName;
+    string lastName;
+    string id;
+    Department department;
+    vector<Course> courses;
+};
