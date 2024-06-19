@@ -24,3 +24,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
+using namespace std; // Helps us to create clean code without using std:: every time
+
