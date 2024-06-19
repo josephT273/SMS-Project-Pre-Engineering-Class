@@ -69,3 +69,28 @@ Course inputCourseDetails() {
     cin.ignore(); // Clear newline character from input buffer
     return course;
 }
+
+// Function to input student details
+Student inputStudentDetails(int studentNumber) {
+    Student student;
+    cout << "\nStudent " << studentNumber << ":\n";
+    cout << "Enter first name (eg: Abebe): ";
+    getline(cin, student.firstName);
+    cout << "Enter last name (eg: Belay): ";
+    getline(cin, student.lastName);
+    cout << "Enter ID (eg: ABC/0001/16): ";
+    getline(cin, student.id);
+
+    inputDepartmentDetails(student.department);
+
+    string numCourses_str;
+    cout << "Enter number of courses (eg: 2): ";
+    getline(cin, numCourses_str);
+    int numCourses = stoi(numCourses_str);
+
+    for (int j = 0; j < numCourses; j++) {
+        student.courses.push_back(inputCourseDetails());
+    }
+
+    return student;
+}
