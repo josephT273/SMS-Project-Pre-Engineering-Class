@@ -56,3 +56,16 @@ void inputDepartmentDetails(Department& department) {
     cout << "Enter department short name (eg: SE): ";
     getline(cin, department.shortName);
 }
+
+// Function to input course details
+Course inputCourseDetails() {
+    Course course;
+    cout << "Enter course name (eg: Python): ";
+    getline(cin, course.name);
+    cout << "Enter course code (eg: PY0001): ";
+    getline(cin, course.code);
+    cout << "Enter score (eg: 95): ";
+    cin >> course.score;
+    cin.ignore(); // Clear newline character from input buffer
+    return course;
+}
