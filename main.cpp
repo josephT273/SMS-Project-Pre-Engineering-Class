@@ -32,3 +32,10 @@ struct Department {
     string name;
     string shortName;
 };
+
+// Structures for for course to add course data with course code and score
+struct Course {
+    string name;
+    string code;
+    double score; // Added score directly in Course structure
+};
