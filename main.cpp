@@ -94,3 +94,14 @@ Student inputStudentDetails(int studentNumber) {
 
     return student;
 }
+
+// Function to display student information
+void displayStudent(const Student& student) {
+    cout << "\nName: " << student.firstName << " " << student.lastName << endl;
+    cout << "ID: " << student.id << endl;
+    cout << "Department: " << student.department.name << " (" << student.department.shortName << ")" << endl;
+    cout << "Courses and Scores:\n";
+    for (const Course& course : student.courses) {
+        cout << course.name << " (" << course.code << "): " << course.score << endl;
+    }
+}
