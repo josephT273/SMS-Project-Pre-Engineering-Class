@@ -48,3 +48,11 @@ struct Student {
     Department department;
     vector<Course> courses;
 };
+
+// Function to input department details
+void inputDepartmentDetails(Department& department) {
+    cout << "Enter department name (eg: Software Engineering): ";
+    getline(cin, department.name);
+    cout << "Enter department short name (eg: SE): ";
+    getline(cin, department.shortName);
+}
