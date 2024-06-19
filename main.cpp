@@ -27,3 +27,8 @@
 
 using namespace std; // Helps us to create clean code without using std:: every time
 
+// Structures for department To add department info
+struct Department {
+    string name;
+    string shortName;
+};
