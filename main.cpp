@@ -105,3 +105,27 @@ void displayStudent(const Student& student) {
         cout << course.name << " (" << course.code << "): " << course.score << endl;
     }
 }
+
+// Main function to display every data inputed from the user
+int main() {
+    vector<Student> students;
+    cout << "***************************************" << endl;
+    cout << "Welcome to Student Management System\t" << endl;
+    cout << "***************************************" << endl;
+
+    int numStudents;
+    cout << "Enter the number of students: ";
+    cin >> numStudents;
+    cin.ignore(); // Clear newline character from input buffer
+
+    for (int i = 0; i < numStudents; i++) {
+        students.push_back(inputStudentDetails(i + 1));
+    }
+
+    cout << "\nStudent Information:\n";
+    for (const Student& student : students) {
+        displayStudent(student);
+    }
+
+    return 0;
+}
